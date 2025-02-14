@@ -25,6 +25,7 @@ body {
     height: 50%;
     object-fit: cover;
     border: 3px solid white;
+    justify-content: center;
 }
 
 a {
@@ -37,11 +38,31 @@ a {
     justify-content: center;
     gap: 16px;
     padding: 8px;
-    background: darkred;
+    background: rgb(180, 6, 6);
     border: 1px solid white;
 }
 
 #tabs:hover {
     transform:scale(1.1);
     transition: 0.5s;
+}
+
+#aboutme {
+    background-color: rgb(180, 6, 6);
+    border-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    justify-content: center;
+    width: 40%;
+    padding-left: 100px;
+    padding-right: 100px;
+    font-size: 20px;
+}
+
+#contentContainer {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 8px;
 }
