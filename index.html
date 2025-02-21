@@ -11,6 +11,7 @@
                 width: 400px;
                 padding-top: 50px;
             }
+
             h1 {
                 font-size: 100px;
                 text-shadow: darkblue 2px 2px;
@@ -20,6 +21,12 @@
             h2 {
                 font-size: 50px;
                 text-shadow: darkblue 2px 2px;
+            }
+            #bio {
+                font-size: 20px;
+                padding-left: 200px;
+                padding-right: 200px;
+
             }
             .wrapper {
                 display: flex;
@@ -31,12 +38,32 @@
             .container {
                 position: relative;
                 width: 40%;
+                margin: 10px;
             }
-
+            #Project-1 {
+              display: flex;
+              align-content: space-evenly;
+              flex-wrap: wrap;
+            }
+            #Project-2 {
+              display: flex;
+              align-content: space-evenly;
+              flex-wrap: wrap;
+            }
+            #Project-3 {
+              display: flex;
+              align-content: space-evenly;
+              flex-wrap: wrap;
+            }
+            #Project-4 {
+              display: flex;
+              align-content: space-evenly;
+              flex-wrap: wrap;
+            }
             .image {
                 opacity: 1;
                 display: block;
-                width: 40%;
+                width: 100%;
                 height: auto;
                 transition: .5s ease;
                 backface-visibility: hidden;
@@ -64,6 +91,13 @@
                 background-color: #4CAF50;
                 color: white;
                 font-size: 32px;
+                padding: 16px 32px;
+            }
+
+            .subtitle {
+                color: white;
+                font-weight: bold;
+                font-size: 16px;
                 padding: 16px 32px;
             }
 
@@ -174,90 +208,94 @@
             <a id="tabs" href="contact.html">Contact</a>
         </div>
 
-        <img src="images/AG-Website-Logo.svg" alt="Alejandro Galego Logo" class="logo">
+        <a href="index.html"><img src="images/AG-Website-Logo.svg" alt="Alejandro Galego Logo" class="logo"></href></a>
         <h1>Alejandro Galego</h1>
 
         <h2>Creative Visual Storyteller</h2>
 
             <div id="bio">
-                <p>Hi! I'm Alejandro Galego, an illustrator and graphic designer with an interest in storytelling. I'm also learning to code by building and refining this website.</p>
-
-
-            <br>
-        <section id="illustrations">
-        <h2>Illustrations</h2>
-        <div id="container">
-            <div id="row">
-            <div id="illustrations">
-                <div class="container">
-                    <div class="mySlides">
-                      <div class="numbertext">1 / 3</div>
-                      <img src="images/Specter VHS (final).png" style="width:100%">
-                    </div>
-                  
-                    <div class="mySlides">
-                      <div class="numbertext">2 / 3</div>
-                      <img src="images/Eonite Full Body.png" style="width:100%">
-                    </div>
-                  
-                    <div class="mySlides">
-                      <div class="numbertext">3 / 3</div>
-                      <img src="images/Walter Gameboy Palette.jpeg" style="width:100%">
-                    </div>
-                      
-                    <a class="prev" onclick="plusSlides(-1)">❮</a>
-                    <a class="next" onclick="plusSlides(1)">❯</a>
-                                    
-                      <div class="row">
-                        <div class="column">
-                          <img class="demo cursor" src="images/Specter VHS (final).png" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
-                        </div>
-                        <div class="column">
-                          <img class="demo cursor" src="images/Eonite Full Body.png" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
-                        </div>
-                        <div class="column">
-                          <img class="demo cursor" src="images/Walter Gameboy Palette.jpeg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-                        </div>
-                      </div>
-                    </div>
-                <!-- <img src="images/Specter VHS (final).png" alt="Illustration 1"> -->
-                <!-- <img src="images/Eonite Full Body.png" alt="Illustration 2"> -->
-                <!-- <img src="images/Walter Gameboy Palette.jpeg" alt="Illustration 3"> -->
+                <h3>Hi! I'm Alejandro Galego, an illustrator and graphic designer with an interest in storytelling.
+                I'm currently studying at the University of Miami and learning how to code by building this website.</h3>
             </div>
-            </div>
-        </div>
-        </section>
-            <br>
+
 
         <h2>Projects</h2>
         <div class="wrapper">
 
-            <div class="container">
+            <div class="container" id="Project-1">
               <img src="images/FF Video Thumbnail.jpg" alt="Final Four Video Thumbnail" class="image" style="width:80%">
               <div class="middle">
                 <div class="text">Final Four Music Video</div>
+                <div class="subtitle">Music Video</div>
               </div>
             </div>
-            <div class="container">
+            <div class="container" id="Project-2">
               <img src="images/Atzok the Deserter Thumbnail.png" alt="Atzok the Deserter Thumbnail" class="image" style="width:80%">
               <div class="middle">
                 <div class="text">Atzok the Deserter</div>
+                <div class="subtitle">Original Story Pitch</div>
               </div>
             </div>
-             <div class="container">
+             <div class="container" id="Project-3">
               <img src="images/Death of Innocence Thumbnail.png" alt="Death of Innocence Thumbnail" class="image" style="width:80%">
               <div class="middle">
                 <div class="text">Death of Innocence</div>
+                <div class="subtitle">Animated Short Film</div>
               </div>
             </div>
-             <div class="container">
+             <div class="container" id="Project-4">
               <img src="images/SoC Tour Thumbnail.png" alt="SoC VR Tour Thumbnail" class="image" style="width:80%">
               <div class="middle">
                 <div class="text">School of Comm VR Tour</div>
+                <div class="subtitle">Virtual Reality Experience</div>
               </div>
             </div>
           </div>
 
+        <section id="illustrations">
+          <h2>Illustrations</h2>
+          <div id="container">
+              <div id="row">
+              <div id="illustrations">
+                  <div class="container">
+                      <div class="mySlides">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="images/Specter VHS (final).png" style="width:100%">
+                      </div>
+                      
+                      <div class="mySlides">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="images/Eonite Full Body.png" style="width:100%">
+                      </div>
+                      
+                      <div class="mySlides">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="images/Walter Gameboy Palette.jpeg" style="width:100%">
+                      </div>
+                          
+                      <a class="prev" onclick="plusSlides(-1)">❮</a>
+                      <a class="next" onclick="plusSlides(1)">❯</a>
+                                        
+                        <div class="row">
+                          <div class="column">
+                            <img class="demo cursor" src="images/Specter VHS (final).png" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+                          </div>
+                          <div class="column">
+                            <img class="demo cursor" src="images/Eonite Full Body.png" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+                          </div>
+                          <div class="column">
+                            <img class="demo cursor" src="images/Walter Gameboy Palette.jpeg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+                          </div>
+                        </div>
+                      </div>
+                  <!-- <img src="images/Specter VHS (final).png" alt="Illustration 1"> -->
+                  <!-- <img src="images/Eonite Full Body.png" alt="Illustration 2"> -->
+                  <!-- <img src="images/Walter Gameboy Palette.jpeg" alt="Illustration 3"> -->
+              </div>
+              </div>
+            </div>
+            </section>
+                <br>
         <section>
         <h2>About Me</h2>
         </section>
