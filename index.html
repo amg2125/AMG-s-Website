@@ -6,6 +6,7 @@
         <title>Homepage</title>
         <link rel="stylesheet" href="style.css">
         <style>
+          @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
             .logo {
                 top: 10px;
                 width: 400px;
@@ -13,16 +14,19 @@
             }
 
             h1 {
-                font-size: 100px;
+              font-family: 'Nunito', sans-serif;  
+              font-size: 100px;
                 text-shadow: darkblue 2px 2px;
                 margin: .25em;
             }
 
             h2 {
+                font-family: 'Nunito', sans-serif;
                 font-size: 50px;
                 text-shadow: darkblue 2px 2px;
             }
             #bio {
+                font-family: 'nunito', sans-serif;
                 font-size: 20px;
                 padding-left: 200px;
                 padding-right: 200px;
@@ -90,6 +94,7 @@
             }
 
             .text {
+                font-family: 'Nunito', sans-serif;
                 background-color: #4CAF50;
                 color: white;
                 font-size: 32px;
@@ -98,6 +103,7 @@
 
             .subtitle {
                 color: white;
+                font-family: 'Nunito', sans-serif;
                 font-weight: bold;
                 font-size: 16px;
                 padding: 16px 32px;
@@ -203,7 +209,14 @@
                 justify-self: center;
             }
 
+            #email {
+              font-family: 'nunito', sans-serif;
+              font-size: 20px;
+              font-style: bold;
+            }
+
             #linkedin {
+              font-family: 'nunito', sans-serif;
               font-size: 20px;
               font-style: bold;
             }
@@ -312,7 +325,7 @@
 
         <section id="contact">
           <h2>Contact Me</h2>
-          <h3>amg9350@miami.edu</h3>
+          <div id="email">amg9350@miami.edu</div>
           <a id="linkedin" href="https://www.linkedin.com/">LinkedIn</a>
         </section>
 
