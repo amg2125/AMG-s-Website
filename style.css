@@ -101,41 +101,41 @@ a {
 }
 
 .skill-level-1 {
-    background: linear-gradient(to bottom, #ff0000, #ff0000);
+    background: linear-gradient(to bottom, #ff0000, #ff2525);
     -webkit-background-clip: text;
     color: transparent;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 40px;
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 1px;
 }
 
 .skill-level-2 {
-    background: linear-gradient(to bottom, #ff0000, #ff2525);
+    background: linear-gradient(to bottom, #ff2525, #ff5900);
     -webkit-background-clip: text;
     color: transparent;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 40px;
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 1px;
 }
 
 .skill-level-3 {
-    background: linear-gradient(to bottom, #ff2525, #ff5900);
+    background: linear-gradient(to bottom, #ff5900, #ffff00);
     -webkit-background-clip: text;
     color: transparent;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 40px;
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 1px;
 }
 
 .skill-level-4 {
-    background: linear-gradient(to bottom, #ff5900, #ffff00);
+    background: linear-gradient(to bottom, #ffff00, #7fff00);
     -webkit-background-clip: text;
     color: transparent;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 40px;
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 1px;
 }
@@ -145,7 +145,7 @@ a {
     -webkit-background-clip: text;
     color: transparent;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 40px;
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 1px;
 }
