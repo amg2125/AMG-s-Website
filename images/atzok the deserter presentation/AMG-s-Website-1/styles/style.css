@@ -1,0 +1,41 @@
+/* General styles for the slideshow */
+#slideshow {
+    position: relative;
+    max-width: 600px; /* Set a maximum width for the slideshow */
+    margin: 20px auto; /* Center the slideshow */
+    overflow: hidden; /* Hide overflow to prevent images from spilling out */
+    border: 3px solid rgb(180, 6, 6); /* Add a border around the slideshow */
+}
+
+/* Style for each image in the slideshow */
+#slideshow img {
+    width: 100%; /* Make images responsive */
+    display: none; /* Hide images by default */
+}
+
+/* Show the active image */
+#slideshow img.active {
+    display: block; /* Only the active image will be displayed */
+}
+
+/* Navigation buttons for the slideshow */
+#slideshow .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Position the left button */
+#slideshow .prev {
+    left: 10px; /* Position to the left */
+}
+
+/* Position the right button */
+#slideshow .next {
+    right: 10px; /* Position to the right */
+}

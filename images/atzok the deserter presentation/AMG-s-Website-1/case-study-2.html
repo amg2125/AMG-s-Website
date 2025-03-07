@@ -5,27 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Case Study 2</title>
     <link rel="stylesheet" href="style.css">
+    <script src="scripts/slideshow.js" defer></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
         .logo {
             top: 10px;
             width: 400px;
             padding-top: 50px;
-            }
+        }
         h1 {
             font-family: 'Nunito', sans-serif;  
             font-size: 60px;
             text-shadow: darkred 3px 3px;
             margin: .25em;
-            }
+        }
         h2 {
             font-family: 'Nunito', sans-serif;
             font-size: 50px;
             text-shadow: darkred 3px 3px;
             margin-bottom: -10px;
-            }
-        #intro {
-            font-size: 25px;
+        }
+        #intro, #development, #takeaways {
+            font-size: 22px;
+            font-family: 'Nunito', sans-serif;
             margin: .25em;
             display: flex;
             flex-wrap: wrap;
@@ -35,33 +37,7 @@
             padding-left: 100px;
             padding-right: 100px;
             margin: 0 auto;
-            font-size: 22px;
-            font-family: 'Nunito', sans-serif;
-            }
-        #development {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            text-align: left;
-            width: 80%;
-            padding-left: 100px;
-            padding-right: 100px;
-            margin: 0 auto;
-            font-size: 22px;
-            font-family: 'Nunito', sans-serif;
-            }
-        #takeaways {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            text-align: left;
-            width: 80%;
-            padding-left: 100px;
-            padding-right: 100px;
-            margin: 0 auto;
-            font-size: 22px;
-            font-family: 'Nunito', sans-serif;
-            }
+        }
         .thumbnail {
             width: 50%;
             height: 50%;
@@ -70,22 +46,40 @@
             border: 3px solid rgb(180, 6, 6);
             border-width: 10px;
             width: 600px;
-            }
+        }
         .link {
             font-size: 25px;
             margin: .25em;
             text-decoration: underline;
-            }
-        #sketches {
-            width: 50%;
-            height: 50%;
-            margin: 10px;
-            display: flex;
-            flex-wrap: wrap;
-            align-content: space-between;
-            border: 1px solid rgb(180, 6, 6);
-            border-width: 5px;
-            }
+        }
+        #slideshow {
+            position: relative;
+            max-width: 600px;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+        #slideshow img {
+            width: 100%;
+            display: none;
+        }
+        #slideshow img.active {
+            display: block;
+        }
+        #slideshow button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+        #slideshow button.prev {
+            left: 10px;
+        }
+        #slideshow button.next {
+            right: 10px;
+        }
     </style>
 </head>
 <body>
@@ -95,13 +89,13 @@
         <a id="tabs" href="contact.html">Contact</a>
     </div>
 
-    <a href="index.html"><img src="images/AG-Website-Logo.svg" alt="Alejandro Galego Logo" class="logo"></href></a>
+    <a href="index.html"><img src="images/AG-Website-Logo.svg" alt="Alejandro Galego Logo" class="logo"></a>
     <img src="images/Atzok the Deserter Thumbnail.png" alt="Atzok the Deserter Thumbnail" class="thumbnail">
     <h1>Atzok the Deserter</h1>
 
     <div id="facts">
         <ul>
-            <li class="info"><b>Media Type: Story Pitch Presenation</b></li>
+            <li class="info"><b>Media Type: Story Pitch Presentation</b></li>
             <li class="info"><b>Individual Project</b></li>
             <li class="info"><b>Tools Used: Adobe Photoshop, MediBang Paint</b></li>
         </ul>
@@ -124,7 +118,7 @@
             universe, in the same vein as "Star Wars Episode IV: A New Hope."
         </p>
         <p>After settling on a story concept, I began working on the characters, starting with the protagonist. The main character of this story was Atzok, an alien belonging to a highly
-            militaristic race of reptilians called the Klorn. I had never drawn reptilian characters before, so I struggled initally to come up with Atzok's design. However, I went to the
+            militaristic race of reptilians called the Klorn. I had never drawn reptilian characters before, so I struggled initially to come up with Atzok's design. However, I went to the
             professor for some guidance and looked up references of reptiles in the real world and from fiction to help me, and I able to come up with a rough design for Atzok. I then refined 
             his design based on feedback in class and came up with multiple sketches of Atzok in different poses and expressions as well as a full-body turnaround for him.
         </p>
@@ -150,7 +144,7 @@
     <h2>Takeaways</h2>
     <div id="takeaways">
         <p>This project taught me many valuable lessons through its development. It taught me that there are a lot of steps in the process of character design, not just creating a series of
-            concept sketches and revising the character designs. Charcter designs can go through multiple revisions through development, and even when a design is finalized artists need to
+            concept sketches and revising the character designs. Character designs can go through multiple revisions through development, and even when a design is finalized artists need to
             draw those characters from different angles and in different poses so other artists working on the project can draw the character correctly. Another big takeaway I learned was
             that it's okay to ask for help when you're struggling with a design. Getting the professor's help and insight for Atzok and D4A5's designs not only helped me come up with good
             designs, it also exposed me to valuable general advice for future character design projects.
@@ -159,92 +153,20 @@
 
     <br>
 
-    <div class="slideshow-container">
-        <div class="mySlides fade">
-            <img src="images/atzok the deserter presentation/FINAL - Cover.jpg" style="width:50%">
-        </div>
-        <div class="mySlides fade">
-            <img src="images/atzok the deserter presentation/FINAL - Slide 1.jpg" style="width:50%">
-        </div>
-        <div class="mySlides fade">
-            <img src="images/atzok the deserter presentation/FINAL - Slide 2.jpg" style="width:50%">
-        </div>
-        <div class="mySlides fade">
-            <img src="images/atzok the deserter presentation/FINAL - Slide 3.jpg" style="width:50%">
-        </div>
-        <div class="mySlides fade">
-            <img src="images/atzok the deserter presentation/FINAL - Slide 4.jpg" style="width:50%">
-        </div>
-        <div class="mySlides fade">
-            <img src="images/atzok the deserter presentation/FINAL - Slide 5.jpg style=" style="width:50%">
-        </div>
-        <div class="mySlides fade">
-            <img src="images/atzok the deserter presentation/FINAL - Slide 6.jpg style=" style="width:50%">
-        </div>
-        <div class="mySlides fade">
-            <img src="images/atzok the deserter presentation/FINAL - Slide 7.jpg style=" style="width:50%">
-        </div>
-        <div class="mySlides fade">
-            <img src="images/atzok the deserter presentation/FINAL - Slide 8.jpg style=" style="width:50%">
-        </div>
-        <div class="mySlides fade">
-            <img src="images/atzok the deserter presentation/FINAL - Slide 9.jpg style=" style="width:50%">
-        </div>
-        <div class="mySlides fade">
-            <img src="images/atzok the deserter presentation/FINAL - Slide 10.jpg style=" style="width:50%">
-        </div>
-        <div class="mySlides fade">
-            <img src="images/atzok the deserter presentation/FINAL - Slide 11.jpg style=" style="width:50%">
-        </div>
-    
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-    <br>
-    
-    <!-- The dots/circles -->
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-        <span class="dot" onclick="currentSlide(5)"></span>
-        <span class="dot" onclick="currentSlide(6)"></span>
-        <span class="dot" onclick="currentSlide(7)"></span>
-        <span class="dot" onclick="currentSlide(8)"></span>
-        <span class="dot" onclick="currentSlide(9)"></span>
-        <span class="dot" onclick="currentSlide(10)"></span>
-        <span class="dot" onclick="currentSlide(11)"></span>
+    <div id="link">
+        <iframe src="https://drive.google.com/file/d/1PSlK_THFwPR4CeVGXVWq_er4PCRiexIR/preview" width="640" height="480" allow="autoplay"></iframe>
     </div>
 
-    <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-        
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-        
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-        
-        function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            let dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";  
-            dots[slideIndex-1].className += " active";
-        }
-        </script>
+    <h2>Character Design Slideshow</h2>
+    <div id="slideshow">
+        <img src="images/atzok rough design sketches.jpg" alt="Atzok Rough Design Sketches" class="active">
+        <img src="images/atzok refined design.jpg" alt="Atzok Final Design">
+        <img src="images/d4a5 design concepts.jpg" alt="D4A5 Design Concepts">
+        <img src="images/d4a5 final design.png" alt="D4A5 Final Design">
+        <img src="images/trosk design concepts.png" alt="Trosk Design Concepts">
+        <img src="images/trosk final design.png" alt="Trosk Final Design">
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
 </body>
 </html>

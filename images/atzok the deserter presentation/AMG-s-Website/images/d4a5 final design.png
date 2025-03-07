@@ -1,0 +1,12 @@
+<div id="slideshow-container">
+    <div class="slideshow">
+        <img class="slide" src="images/atzok rough design sketches.jpg" alt="Atzok Rough Design Sketches">
+        <img class="slide" src="images/atzok refined design.jpg" alt="Atzok Final Design">
+        <img class="slide" src="images/d4a5 design concepts.jpg" alt="D4A5 Design Concepts">
+        <img class="slide" src="images/d4a5 final design.png" alt="D4A5 Final Design">
+        <img class="slide" src="images/trosk design concepts.png" alt="Trosk Design Concepts">
+        <img class="slide" src="images/trosk final design.png" alt="Trosk Final Design">
+    </div>
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+</div>
