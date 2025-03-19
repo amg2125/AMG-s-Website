@@ -208,6 +208,11 @@
                 border: 10px solid rgb(255, 217, 0);
                 border-radius: 50%;
                 justify-self: center;
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .portrait:hover {
+                transform: scale(1.2); /* Grows the image by 20% */
             }
 
             #skills {
@@ -294,18 +299,23 @@
               <div id="illustrations">
                   <div class="container">
                       <div class="mySlides">
-                        <div class="numbertext">1 / 3</div>
+                        <div class="numbertext">1 / 4</div>
                         <img src="images/Specter VHS (final).png" style="width:100%">
                       </div>
                       
                       <div class="mySlides">
-                        <div class="numbertext">2 / 3</div>
+                        <div class="numbertext">2 / 4</div>
                         <img src="images/Eonite Full Body.png" style="width:100%">
                       </div>
                       
                       <div class="mySlides">
-                        <div class="numbertext">3 / 3</div>
+                        <div class="numbertext">3 / 4</div>
                         <img src="images/Walter Gameboy Palette.jpeg" style="width:100%">
+                      </div>
+
+                      <div class="mySlides">
+                        <div class="numbertext">3 / 4</div>
+                        <img src="images/Imperial Klorn Guard.png" style="width:100%">
                       </div>
                           
                       <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -321,11 +331,11 @@
                           <div class="column">
                             <img class="demo cursor" src="images/Walter Gameboy Palette.jpeg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
                           </div>
+                          <div class="column">
+                            <img class="demo cursor" src="images/Imperial Klorn Guard.png" style="width:100%" onclick="currentSlide(4)" alt="Mountains and fjords">
+                          </div>
                         </div>
                       </div>
-                  <!-- <img src="images/Specter VHS (final).png" alt="Illustration 1"> -->
-                  <!-- <img src="images/Eonite Full Body.png" alt="Illustration 2"> -->
-                  <!-- <img src="images/Walter Gameboy Palette.jpeg" alt="Illustration 3"> -->
               </div>
               </div>
             </div>
