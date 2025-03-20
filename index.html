@@ -8,19 +8,29 @@
         <style>
           @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
           
+          :root{
+            --scroll-y: 0;
+            --scroll-offset: 0;
+            }
+
           .header-background {
             position: relative;
             background-image: url('images/pexels-daniel-reche-718241-1556704.jpg');
             background-size: cover;
-            background-position: center;
+            background-position-x: center;
+            background-position-y: var(--scroll-offset);
+            background-attachment: fixed; /* Enables parallax effect */
             padding: 50px 0;
             text-align: center;
             color: white;
+            width: calc(100% + 20px);
+            height: 100vh;
             margin-top: -10px;
             margin-left: -10px;
             margin-right: -10px;
             margin-bottom: 20px;
             padding-bottom: 100px;
+            z-index: 0;
           }
 
           .header-background h1, .header-background h2 {
@@ -267,7 +277,7 @@
             <a id="tabs" href="contact.html">Contact</a>
         </div>
 
-        <div class="header-background">
+        <div class="header-background" id="headerBackground">
           <div style="position: relative; z-index: 1;">
             <a href="index.html"><img src="images/AG-Website-Logo.svg" alt="Alejandro Galego Logo" class="logo"></a>
           </div>
@@ -392,15 +402,25 @@
               if (n > slides.length) {slideIndex = 1}
               if (n < 1) {slideIndex = slides.length}
               for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
+              slides[i].style.display = "none";
               }
+              if (dots.length > 0) { // Check if dots exist
               for (i = 0; i < dots.length; i++) {
                 dots[i].className = dots[i].className.replace(" active", "");
               }
-              slides[slideIndex-1].style.display = "block";
               dots[slideIndex-1].className += " active";
               captionText.innerHTML = dots[slideIndex-1].alt;
+              }
+              slides[slideIndex-1].style.display = "block";
             }
+
+            // Add parallax effect to the header-background
+            window.addEventListener('scroll', function () {
+                  const header = document.getElementById('headerBackground');
+                  const scrollPosition = window.scrollY;
+                  const offset = -scrollPosition * 0.5; // Adjust multiplier for parallax intensity
+                  header.style.backgroundPositionY = `${offset}px`;
+                });
             </script>
 
             <footer>
