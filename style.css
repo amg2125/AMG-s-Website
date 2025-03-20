@@ -243,6 +243,11 @@ footer {
     width: 100%;
     margin-top: 200px;
     box-sizing: border-box;
+    width: -webkit-fill-available;
+    z-index: 1;
+    margin-bottom: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
 }
 
 footer a {
