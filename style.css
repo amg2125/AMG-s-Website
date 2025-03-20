@@ -27,25 +27,6 @@ body {
     width:-webkit-fill-available;
 }
 
-.header-background {
-    background-image: url('images/pexels-daniel-reche-718241-1556704.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 50px 0;
-    text-align: center;
-    color: white;
-    margin-top: -10px;
-    margin-left: -10px;
-    margin-right: -10px;
-    margin-bottom: 20px;
-    padding-bottom: 100px;
-}
-
-.header-background h1, .header-background h2 {
-    margin: 0;
-    padding: 10px 0;
-}
-
 #illustrations {
     display: flex;
     justify-content: center;
