@@ -38,7 +38,6 @@
             padding: 10px 0;
             z-index: 2;
           }
-
         
           .header-background::after {
             content: "";
@@ -247,6 +246,11 @@
                 transform: scale(1.2); /* Grows the image by 20% */
             }
 
+            section:has(#contentContainer) {
+              display: flex;
+              justify-content: center;
+            }
+
             #contentContainer {
               background-color: rgba(0, 0, 0, 0.7);
               padding: 20px;
@@ -260,13 +264,17 @@
             }
 
             #skills {
-                font-family: 'nunito', sans-serif;
-                font-size: 20px;
-                width: 50%;
-                display: flex;
-                flex-wrap: nowrap;
-                justify-content: center;
-                margin: 0 auto;
+              font-family: 'nunito', sans-serif;
+              font-size: 20px;
+              width: 50%;
+              display: flex;
+              flex-wrap: nowrap;
+              justify-content: center;
+              margin: 0 auto;
+            }
+
+            #skills ul {
+              padding: 0px;
             }
 
             #email {
@@ -346,16 +354,16 @@
                   <div class="container">
                     <div class="slideshow-container">
                       <div class="mySlides fade">
-                        <img src="images/Specter VHS (final).png" style="width:100%">
+                      <img src="images/Specter VHS (final).png" style="width:100%">
                       </div>
                       <div class="mySlides fade">
-                        <img src="images/Eonite Full Body.png" style="width:100%">
+                      <img src="images/Eonite Full Body.png" style="width:100%">
                       </div>
                       <div class="mySlides fade">
-                        <img src="images/Walter Gameboy Palette.jpeg" style="width:100%">
+                      <img src="images/Walter Gameboy Palette.jpeg" style="width:100%">
                       </div>
                       <div class="mySlides fade">
-                        <img src="images/Imperial Klorn Guard.png" style="width:100%">
+                      <img src="images/Imperial Klorn Guard.png" style="width:100%">
                       </div>
                   </div>
                   <!-- Next and previous buttons -->
