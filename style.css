@@ -114,60 +114,62 @@ a {
     padding-right: 100px;
 }
 
-.skill-level-1 {
-    background: linear-gradient(to bottom, #ff0000, #ff2525);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    font-weight: bold;
-    font-size: 40px;
-    -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: 1px;
+.skills{
+    transform: scale(1);
+    transition: 0.5s;
 }
 
-.skill-level-2 {
-    background: linear-gradient(to bottom, #ff2525, #ff5900);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    font-weight: bold;
-    font-size: 40px;
-    -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: 1px;
+.skills:hover {
+    transform:scale(1.1);
+    transition: 0.5s;
+
 }
 
-.skill-level-3 {
-    background: linear-gradient(to bottom, #ff5900, #ffff00);
+#skill-level-1 {
+    background: white;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     font-weight: bold;
     font-size: 40px;
-    -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: 1px;
 }
 
-.skill-level-4 {
-    background: linear-gradient(to bottom, #ffff00, #7fff00);
+#skill-level-2 {
+    background: white;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     font-weight: bold;
     font-size: 40px;
-    -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: 1px;
 }
 
-.skill-level-5 {
-    background: linear-gradient(to bottom, #ffff00, #7fff00);
+#skill-level-3 {
+    background: white;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     font-weight: bold;
     font-size: 40px;
-    -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: 1px;
 }
+
+#skill-level-4 {
+    background: white;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+#skill-level-5 {
+    background: white;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    font-size: 40px;
+}
+
 .slideshow-container {
     max-width: 1000px;
     position: relative;
