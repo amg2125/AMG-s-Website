@@ -273,6 +273,16 @@
               flex-wrap: nowrap;
               justify-content: center;
               margin: 0 auto;
+              will-change: transform;
+            }
+
+            .skill {
+              transition: transform 0.3s ease-in-out;
+            }
+
+            .skill:hover {
+              transform: scale(1.2);
+              
             }
 
             #skills ul {
