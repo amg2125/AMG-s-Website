@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
-    <link rel="stylesheet" href="style.css">
+    <link type="text/css" rel="stylesheet" href="style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
         body {
@@ -18,6 +18,11 @@
             top: 10px;
             width: 400px;
             padding-top: 50px;
+        }
+        canvas {
+            position: fixed;
+            inset: 0;
+            z-index: -1; /* Ensure the canvas is behind other elements */
         }
         h1 {
             font-family: 'Nunito', sans-serif;
@@ -68,6 +73,136 @@
         </div>
     </div>
 
+    <script type="importmap">
+        {
+            "imports": {
+              "three": "https://cdn.jsdelivr.net/npm/three@0.174/build/three.module.js",
+              "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.174/examples/jsm/"
+            }
+          }
+    </script>
+
+    <script type="module">
+
+        import * as THREE from 'three';
+        // import { GUI } from 'three/addons/libs/lil-gui.module.min.js';
+        // import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+        import { LineMaterial } from 'three/addons/lines/LineMaterial.js';
+        import { Wireframe } from 'three/addons/lines/Wireframe.js';
+        import { WireframeGeometry2 } from 'three/addons/lines/WireframeGeometry2.js';
+
+        let scrollFraction = 0;
+        let wireframe, renderer, scene, camera;
+        let currentRotationY = 0;
+        let wireframe1;
+        let matLine, matLineBasic, matLineDashed;
+        // let gui;
+
+        function lerp(start, end, t) {
+            return start + (end - start) * t;
+        }
+
+        init();
+
+        function init() {
+
+            renderer = new THREE.WebGLRenderer( { antialias: true } );
+            renderer.setPixelRatio( window.devicePixelRatio );
+            renderer.setSize( window.innerWidth, window.innerHeight );
+            renderer.setClearColor( 0x000000, 0.0 );
+            renderer.setAnimationLoop( animate );
+            document.body.appendChild( renderer.domElement );
+
+            scene = new THREE.Scene();
+
+            camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 1, 1000 );
+            camera.position.set(  0, 0, 75 );
+
+                            
+            // controls = new OrbitControls( camera, renderer.domElement );
+            // controls.minDistance = 10;
+            // controls.maxDistance = 500;
+
+
+            // Wireframe ( WireframeGeometry2, LineMaterial )
+
+            let geo = new THREE.IcosahedronGeometry( 20, 1 );
+            const geometry = new WireframeGeometry2( geo );
+
+            matLine = new LineMaterial( {
+                color: 0x4080ff,
+                linewidth: 5, // in pixels
+                dashed: false
+            } );
+
+            wireframe = new Wireframe( geometry, matLine );
+            wireframe.computeLineDistances();
+            wireframe.scale.set( 1, 1, 1 );
+            scene.add( wireframe );
+
+            // Line ( THREE.WireframeGeometry, THREE.LineBasicMaterial ) - rendered with gl.LINE
+
+            // geo = new THREE.WireframeGeometry( geo );
+
+            // matLineBasic = new THREE.LineBasicMaterial( { color: 0x4080ff } );
+            // matLineDashed = new THREE.LineDashedMaterial( { scale: 2, dashSize: 1, gapSize: 1 } );
+
+            // wireframe1 = new THREE.LineSegments( geo, matLineBasic );
+            // wireframe1.computeLineDistances();
+            // wireframe1.visible = false;
+            // scene.add( wireframe1 );
+
+            //
+
+            // window.addEventListener( 'resize', onWindowResize );
+            // window.addEventListener('wheel', onScroll);
+            // onWindowResize();
+
+            // stats = new Stats();
+            // document.body.appendChild( stats.dom );
+
+            // initGui();
+
+        }
+
+        function onWindowResize() {
+
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+
+            renderer.setSize( window.innerWidth, window.innerHeight );
+            
+        }
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            scrollFraction = scrollTop / scrollHeight;
+
+            console.log(scrollFraction); // A number between 0 and 1
+        });
+        
+        function animate() {
+
+            // main scene
+
+            currentRotationY = lerp(currentRotationY, scrollFraction * Math.PI * 2, 0.1);	//Adds rotation along the y-axis
+            wireframe.rotation.y = currentRotationY;
+            wireframe.rotation.x = currentRotationY * 0.5;	//Adds rotation along the x-axis
+            // wireframe.rotation.z += 0.01;	//Adds rotation along the z-axis
+
+            renderer.setClearColor( 0x000000, 1 );
+
+            renderer.setViewport( 0, 0, window.innerWidth, window.innerHeight );
+
+            renderer.render( scene, camera );
+
+        }
+
+        //
+
+    </script>
+    
     <footer>
         <p>&copy; 2025 Alejandro Galego. All rights reserved.</p>
         <p>Contact: <a href="mailto:amg9350@gmail.com">amg9350@gmail.com</a></p>
