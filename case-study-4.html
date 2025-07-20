@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study 3</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+        .logo {
+            top: 10px;
+            width: 400px;
+            padding-top: 50px;
+            }
+        h1 {
+            font-family: 'Nunito', sans-serif;  
+            font-size: 60px;
+            text-shadow: darkred 3px 3px;
+            margin: .25em;
+            }
+        h2 {
+            font-family: 'Nunito', sans-serif;
+            font-size: 50px;
+            text-shadow: darkred 3px 3px;
+            margin-bottom: -10px;
+            }
+        h3 {
+            font-family: 'Nunito', sans-serif;
+            font-size: 30px;
+            text-shadow: darkred 3px 3px;
+            margin-bottom: -10px;
+            text-align: left;
+            }  
+        #intro {
+            font-size: 25px;
+            margin: .25em;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: left;
+            width: 80%;
+            padding-left: 100px;
+            padding-right: 100px;
+            margin: 0 auto;
+            font-size: 22px;
+            font-family: 'Nunito', sans-serif;
+            }
+        #development {
+            display: flex;
+            flex-wrap: wrap;
+            text-align: left;
+            width: 80%;
+            padding-left: 100px;
+            padding-right: 100px;
+            margin: 0 auto;
+            font-size: 22px;
+            font-family: 'Nunito', sans-serif;
+            }
+        #development h3 {
+            text-align: left;
+            }
+        #deliverable {
+            margin: 0 auto;
+            margin-top: 20px;
+            }
+        #takeaways {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: left;
+            width: 80%;
+            padding-left: 100px;
+            padding-right: 100px;
+            margin: 0 auto;
+            font-size: 22px;
+            font-family: 'Nunito', sans-serif;
+            }
+        .thumbnail {
+            width: 50%;
+            height: 50%;
+            margin: 0 auto;
+            display: block;
+            border: 3px solid rgb(180, 6, 6);
+            border-width: 10px;
+            width: 550px;
+            }
+        .gif {
+            border: 3px solid rgb(180, 6, 6);
+            border-width: 5px;
+            width: 70%;
+            }
+        .screenshot {
+            width: 50%;
+            margin: 10px;
+            flex-wrap: wrap;
+            align-content: space-between;
+            border: 3px solid rgb(180, 6, 6);
+            border-width: 5px;
+            }
+        .master-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            }
+        .media-container {
+            text-align: center;
+            /*outline: 1px solid rgb(0,0,0);*/
+            width: 100%;
+            }
+        .media-container img {
+            width: 90%;
+            }
+        /*.image-container {
+            text-align: center;
+            }*/
+        .subtitle {
+            font-size: 18px;
+            color: #ffffff;
+            margin-top: 5px;
+            }
+        /*.gif-container {
+            text-align: center;
+            width: 70%;
+            }*/
+        .link {
+            font-size: 25px;
+            margin: .25em;
+            text-decoration: underline;
+            }
+    </style>
+</head>
+<body>
+    <div id="buttons">
+        <a id="tabs" href="about-me.html">About Me</a>
+        <a id="tabs" href="#projects">Projects</a>
+        <a id="tabs" href="contact.html">Contact</a>
+    </div>
+    
+    <a href="index.html"><img src="images/AG-Website-Logo.svg" alt="Alejandro Galego Logo" class="logo"></href></a>
+    <img src="images/SoC Tour Thumbnail.png" alt="SoC VR Tour Thumbnail" class="thumbnail">
+    <h1>School of Comm VR Tour</h1>
+
+    <div id="facts">
+        <ul>
+            <li class="info"><b>Media Type: Virtual Reality</b></li>
+            <li class="info"><b>Group Project</b></li>
+            <li class="info"><b>Tools Used: Unity, Illustrator, Audacity</b></li>
+        </ul>
+    </div>
+
+    <div id="intro">
+        <p>This virtual reality experience was created for a course called "Immersive Storytelling". For the project, 
+            students had to create a VR experience that both told a story and was interactive. The students that I worked
+            with on this project were Daniele Montefiori, Jack Ketchum, and Lejie Lin.
+        </p>
+    </div>
+
+    <h2>Development</h2>
+    <div id="development">
+        <h3>Choosing the Concept</h3>
+        <p>I chose to adapt a concept I had developed for a previous course: "Death of Innocence", a modern retelling of "All Quiet on
+            the Western Front" set during the Russo-Ukariainian War. The story follows Boris Sperkaz, a Ukrainian college student 
+            who is drafted into the army at the outbreak of the war. I already had character designs and a basic outline, making this 
+            an ideal starting point.
+        </p>
+            <div class="master-container">
+                <div class="media-container">
+                    <img src="images/Case-Study-3/Boris Character Sheet.jpg" alt="Boris Character Design" class="screenshot">
+                    <p class="subtitle">Character design for Boris Sperkaz made for a previous course</p>
+                </div>
+                <div class="media-container">
+                    <img src="images/Case-Study-3/Boris Sketches.jpg" alt="Death of Innocence Character Design" class="screenshot">
+                    <p class="subtitle">Various sketches of Boris Sperkaz made for a previous course</p>
+                </div>
+            </div>
+        <h3>Script and Storyboard</h3>
+        <p>I structured the video as a trailer to fit the project's time limit. I wrote a script in which Boris narrates how his life changed 
+            when the war came, and created a storyboard showing scenes from before and during the war. I revised the script and storyboard as the 
+            project progressed, adjusting for pacing, visuals, and whatever was realistic to animate in the time I had.
+        </p>
+            <div class="master-container">
+                <div class="media-container">
+                    <img src="images/Case-Study-3/Storyboard.png" alt="Death of Innocence Storyboard" class="screenshot">
+                    <p class="subtitle">The first page of the storyboard for "Death of Innocence"</p>
+                </div>
+            </div>
+        <h3>Asset Creation</h3>
+        <p>I created all the assets for the film—characters, props, and backgrounds—in Adobe Illustrator. For Boris, I referenced his previous character
+            design sketches and created multiple models for different scenes and expressions. Since some models took longer to create than others, I started 
+            animating fully completed scenes while continuing to build the remaining assets in others to stay on schedule.
+        </p>
+            <div class="master-container">
+                <div class="media-container">
+                    <img src="images/Case-Study-3/Illustrator Boris Screenshot.png" alt="Illustrator Screenshot of Boris' Character Model" class="screenshot">
+                    <p class="subtitle">Boris' character model open in Illustrator</p>
+                </div>
+                <div class="media-container">
+                    <img src="images/Case-Study-3/Illustrator Scene Background SS.png" alt="Illustrator Screenshot of a scene background" class="screenshot">
+                    <p class="subtitle">A background showing the skyline of Kyiv for a scene in "Death of Innocence"</p>
+                </div>
+            </div>
+        <h3>Narration and Sound Design</h3>
+        <p>While creating the visuals, I also collected multiple sound effects from YouTube and stock sound libraries to fit the various scenes. For the narration,
+            I used the AI text-to-speech generator ElevenLabs to voice Boris, since I lacked the time and resources to find a voice actor or record it myself. I 
+            copied the script into Elevenlabs and generated the audio clips with a fitting voice, which saved time and kept the film's tone consistent.
+        </p>
+            <div class="master-container">
+                <div class="media-container">
+                    <img src="images/Case-Study-3/ElevenLabs SS.png" alt="Screenshot of the ElevenLabs website" class="screenshot">
+                <p class="subtitle">The film's narration was generated using a website called "ElevenLabs"</p>
+                </div>
+            </div>
+        <h3>Animating in After Effects</h3>
+        <p>Animation was the most crucial and time-intensive part of the project. I carefully parented and layered all the assets, applied keyframes for movements, 
+            and utilized class-taught techniques throughout the process. One complex scene involved multiple Ukrainian soldiers running into battle, and to speed up
+            the animation process I used a plugin called Duik Angela to rig the soldiers. This was my first time using Duik and I ran into problems with the rigging,
+            but with trial and error, and help from the professor, I made it work.
+        </p>
+            <div class="master-container">
+                <div class="media-container">
+                    <img src="images/Case-Study-3/AE Gif 1.gif" alt="Kyiv rocket attack scene" class="gif">
+                    <p class="subtitle">Kyiv under attack by rockets</p>
+                </div>
+                <div class="media-container">
+                    <img src="images/Case-Study-3/AE Gif 2.gif" alt="Ukrainian battle charge scene" class="gif">
+                    <p class="subtitle">Ukrainian soldiers charge into battle</p>
+                </div>
+            </div>
+        <h3>Editing and Final Delivery</h3>
+        <p>After animating, I assembled the short in Adobe Premier Pro. The editing process was straightforward since I only needed to arrange and cut the scenes
+            together. After that, I exported the final film and screened it on the final day of class.
+        </p>
+    </div>
+
+    <h2>Final Deliverable</h2>
+    <div id="deliverable">
+        <div id="link">
+            <iframe src="https://drive.google.com/file/d/11MKqEJOj_7Y8CzvFzZpfSnqoPEp1LLUF/preview" width="640" height="480" allow="autoplay"></iframe>
+        </div>
+    </div>
+
+    <h2>Takeaways</h2>
+    <div id="takeaways">
+        <p>This project allowed me to learn more about After Effects and its various plugins. Duik Angela was challenging to use, but learning to use it gave me 
+            insight into rigging workflows and shortcuts in After Effects. I also learned that AI tools like Elevenlabs can be useful timesavers, especially for 
+            solo projects. Lastly, animating while assets were still in progress got me into an efficient workflow, allowing me to manage my time better and helping
+            me meet the deadline.
+        </p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Alejandro Galego. All rights reserved.</p>
+        <p>Contact: <a href="mailto:amg9350@gmail.com">amg9350@gmail.com</a></p>
+    </footer>
+</body>
+</html>
